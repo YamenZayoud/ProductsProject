@@ -18,11 +18,14 @@ class AdminSeeder extends Seeder
     {
         $admin = new User([
             'name' =>'admin',
-            'type' =>'admin',
+            
             'email'=>'admin@admin.com',
             'password' => Hash::make('00000000'),
-        ]);
+            'role_name' => ['Admin'],
+            'status'=> 'Active'
 
+        ]); 
+        $admin->assignRole('Admin');
         $admin->save();
     }
 }

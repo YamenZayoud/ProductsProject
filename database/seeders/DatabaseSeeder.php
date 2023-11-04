@@ -14,8 +14,10 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-         $this->call(AdminSeeder::class);
+    { 
+      $this->call(RoleSeeder::class); 
+      $this->call(AdminSeeder::class);
+         
        // Product::factory(20)->create();
     }
 }
